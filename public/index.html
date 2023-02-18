@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>Accueil</title> 
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="img/logo.PNG">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">GetTechno 2</span>
+                    <span class="profession">Unblock The WEB</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+        
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <div class="search">
+                    <form>
+                        <input id="searchInput" class="input-bar" placeholder="Recherchez ici...">
+                    </form>
+                </div>
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="index.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Accueil</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="games.html">
+                            <i class='bx bx-game icon' ></i>
+                            <span class="text nav-text">Jeux</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="apps.html">
+                            <i class='bx bx-mobile-landscape icon'></i>
+                            <span class="text nav-text">Apps</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="tchat.html">
+                            <i class='bx bx-chat icon'></i>
+                            <span class="text nav-text">Tchat</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="vip.html">
+                            <i class='bx bx-star icon'></i>
+                            <span class="text nav-text">Zone VIP</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="info.html">
+                            <i class='bx bx-info-circle icon'></i>
+                            <span class="text nav-text">Infos</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                
+                <li class="nav-link">
+                    <a href="settings.html">
+                        <i class='bx bx-cog icon' ></i>
+                        <span class="text nav-text">Paramètres</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                    </div>
+                    <span class="mode-text text">Sombre</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch" onclick="checkStatus()"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="home">
+        <div class="text">Accueil</div>
+        <div class="widget">
+            <div class="widget1 back">
+                <h5>Bienvenue sur GetTechno</h5>
+                <div class="username">
+                    <img src="./img/user.png" alt="userimage">
+                    <h8><grade id="grade"></grade><vip id="vip"></vip></h8>
+                    <user id="username"></user>
+                </div>
+                <script>
+                    document.getElementById("username").innerHTML = localStorage.getItem('nickname')
+                    if (localStorage.getItem('nickname')==="X-crash-X"){
+                        document.getElementById("vip").innerHTML = "MVP"
+                    }
+                    if (localStorage.getItem('nickname')==="AldessSc"){
+                        document.getElementById("grade").innerHTML = "CEO"
+                    }
+                    if (localStorage.getItem('nickname')==="SuperCool"){
+                        document.getElementById("vip").innerHTML = "MVP"
+                    }
+                    if (localStorage.getItem('nickname')==="AldessSc"){
+                        document.getElementById("vip").innerHTML = " ADMIN"
+                    }
+                    if (localStorage.getItem('nickname')==="Foxyz"){
+                        document.getElementById("vip").innerHTML = "VIP"
+                    }
+                    if (localStorage.getItem('nickname')==="Pix4rt"){
+                        document.getElementById("grade").innerHTML = "STAFF"
+                    }
+                    if (localStorage.getItem('nickname')==="Arrox78"){
+                        document.getElementById("vip").innerHTML = "VIP"
+                    }
+                  if (localStorage.getItem('nickname')==="Nul0923"){
+                        document.getElementById("vip").innerHTML = "VIP"
+                    }
+                  if (localStorage.getItem('nickname')==="Henri"){
+                        document.getElementById("vip").innerHTML = "VIP"
+                    }
+                </script>
+            </div>
+            <div class="widget1">
+                <div class="datetime">
+                   <div class="time"></div>
+                    <div class="date"></div>
+                </div>
+            </div>
+            <a href="./img/yt5s.io-This Is GetTechno..mp4"><div class="widgetvideo"></div></a>
+            <div class="widget2">
+                <h2>Changelog</h2>
+                <h3>16/02/23 : Le site est de retour</h3>
+                <h3>16/02/23 : Le site est maintenant responsive</h3>
+                <h3>08/02/23 : Vidéo remplacé par une image pour améliorer la vitesse de chargement du site</h3>
+            </div>
+        </div>
+        <br>
+        <div class="footer">
+            <div class="footer-text">GetTechno-V2/main 13e71d0</div>
+        </div>
+    </section>
+
+    <script src="./js/script.js"></script>
+    <script src="./uv/uv.bundle.js"></script>
+    <script src="./uv/uv.config.js"></script>
+    <script src="./index.js"></script>
+    <script src="./js/time.js"></script>
+</body>
+</html>
